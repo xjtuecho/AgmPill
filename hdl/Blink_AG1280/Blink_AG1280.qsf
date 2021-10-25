@@ -1,0 +1,231 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+# Date created = 14:48:52  October 12, 2021
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Blink_AG1280_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name VERILOG_FILE .\\Blink_AG1280.v
+set_global_assignment -name VERILOG_FILE "D:\\EE\\FPGA\\AGM\\Supra-2021.06.b0-66adbd53-win64-all\\etc\\arch\\rodinia\\alta_sim.v"
+set_global_assignment -name SDC_FILE .\\Blink_AG1280.sdc
+set_global_assignment -name SDC_FILE .\\Blink_AG1280_derate.sdc
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 11.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:37:04  JANUARY 04, 2013"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY ./quartus_logs
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_global_assignment -name FLOW_ENABLE_IO_ASSIGNMENT_ANALYSIS ON
+set_global_assignment -name SOURCE_FILE PLL.ip
+set_global_assignment -name VERILOG_FILE PLL.v
+set_global_assignment -name VERILOG_FILE common/PowerOnReset.v
+set_global_assignment -name VERILOG_FILE common/DFFx2.v
+set_global_assignment -name VERILOG_FILE common/clkdivider.v
+set_global_assignment -name FLOW_DISABLE_ASSEMBLER ON
+
+# Classic Timing Assignments
+# ==========================
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name TOP_LEVEL_ENTITY Blink_AG1280
+set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS ON
+set_global_assignment -name ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP ON
+set_global_assignment -name AUTO_OPEN_DRAIN_PINS OFF
+set_global_assignment -name MAX_BALANCING_DSP_BLOCKS 0
+set_global_assignment -name AUTO_ROM_RECOGNITION OFF
+set_global_assignment -name AUTO_RAM_RECOGNITION OFF
+set_global_assignment -name MAX_RAM_BLOCKS_M4K 0
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name TOP_LEVEL_ENTITY Blink_AG1280
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EP4CE75F23C8
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name ROUTING_BACK_ANNOTATION_MODE OFF
+set_global_assignment -name OPTIMIZE_HOLD_TIMING "IO PATHS AND MINIMUM TPD PATHS"
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name ROUTER_TIMING_OPTIMIZATION_LEVEL MAXIMUM
+set_global_assignment -name PLACEMENT_EFFORT_MULTIPLIER 10
+set_global_assignment -name ROUTER_EFFORT_MULTIPLIER 10
+set_global_assignment -name ECO_OPTIMIZE_TIMING ON
+set_global_assignment -name FINAL_PLACEMENT_OPTIMIZATION ALWAYS
+set_global_assignment -name FITTER_AGGRESSIVE_ROUTABILITY_OPTIMIZATION ALWAYS
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name IO_PLACEMENT_OPTIMIZATION ON
+set_global_assignment -name SEED 1
+set_global_assignment -name FIT_ONLY_ONE_ATTEMPT OFF
+set_global_assignment -name MAX_GLOBAL_CLOCKS_ALLOWED 8
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC_FOR_AREA ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_EFFORT EXTRA
+
+# EDA Netlist Writer Assignments
+# ==============================
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
+
+# LogicLock Region Assignments
+# ============================
+set_global_assignment -name LOGICLOCK_INCREMENTAL_COMPILE_ASSIGNMENT OFF
+
+# Power Estimation Assignments
+# ============================
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+
+# start EDA_TOOL_SETTINGS(eda_simulation)
+# ---------------------------------------
+
+	# EDA Netlist Writer Assignments
+	# ==============================
+	set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+	set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+	set_global_assignment -name EDA_MAINTAIN_DESIGN_HIERARCHY PARTITION_ONLY -section_id eda_simulation
+
+# end EDA_TOOL_SETTINGS(eda_simulation)
+# -------------------------------------
+
+# --------------------------
+# start ENTITY(Blink_AG1280)
+
+	# start LOGICLOCK_REGION(core_logic)
+	# ----------------------------------
+
+		# LogicLock Region Assignments
+		# ============================
+		set_global_assignment -name LL_ENABLED ON -section_id core_logic
+		set_global_assignment -name LL_AUTO_SIZE OFF -section_id core_logic
+		set_global_assignment -name LL_STATE LOCKED -section_id core_logic
+		set_global_assignment -name LL_RESERVED OFF -section_id core_logic
+		set_global_assignment -name LL_SECURITY_ROUTING_INTERFACE OFF -section_id core_logic
+		set_global_assignment -name LL_IGNORE_IO_BANK_SECURITY_CONSTRAINT OFF -section_id core_logic
+		set_global_assignment -name LL_PR_REGION OFF -section_id core_logic
+		set_global_assignment -name LL_WIDTH 13 -section_id core_logic
+		set_global_assignment -name LL_HEIGHT 8 -section_id core_logic
+		set_global_assignment -name LL_ORIGIN X1_Y1 -section_id core_logic
+		set_global_assignment -name LL_MEMBER_OF core_logic -section_id core_logic
+
+	# end LOGICLOCK_REGION(core_logic)
+	# --------------------------------
+
+	# start LOGICLOCK_REGION(LOGIC_RESERVE_0)
+	# ---------------------------------------
+
+		# LogicLock Region Assignments
+		# ============================
+		set_global_assignment -name LL_ENABLED ON -section_id LOGIC_RESERVE_0
+		set_global_assignment -name LL_AUTO_SIZE OFF -section_id LOGIC_RESERVE_0
+		set_global_assignment -name LL_STATE LOCKED -section_id LOGIC_RESERVE_0
+		set_global_assignment -name LL_RESERVED ON -section_id LOGIC_RESERVE_0
+		set_global_assignment -name LL_SECURITY_ROUTING_INTERFACE OFF -section_id LOGIC_RESERVE_0
+		set_global_assignment -name LL_IGNORE_IO_BANK_SECURITY_CONSTRAINT OFF -section_id LOGIC_RESERVE_0
+		set_global_assignment -name LL_PR_REGION OFF -section_id LOGIC_RESERVE_0
+		set_global_assignment -name LL_WIDTH 9 -section_id LOGIC_RESERVE_0
+		set_global_assignment -name LL_HEIGHT 1 -section_id LOGIC_RESERVE_0
+		set_global_assignment -name LL_ORIGIN X1_Y1 -section_id LOGIC_RESERVE_0
+
+	# end LOGICLOCK_REGION(LOGIC_RESERVE_0)
+	# -------------------------------------
+
+	# start LOGICLOCK_REGION(LOGIC_RESERVE_1)
+	# ---------------------------------------
+
+		# LogicLock Region Assignments
+		# ============================
+		set_global_assignment -name LL_ENABLED ON -section_id LOGIC_RESERVE_1
+		set_global_assignment -name LL_AUTO_SIZE OFF -section_id LOGIC_RESERVE_1
+		set_global_assignment -name LL_STATE LOCKED -section_id LOGIC_RESERVE_1
+		set_global_assignment -name LL_RESERVED ON -section_id LOGIC_RESERVE_1
+		set_global_assignment -name LL_SECURITY_ROUTING_INTERFACE OFF -section_id LOGIC_RESERVE_1
+		set_global_assignment -name LL_IGNORE_IO_BANK_SECURITY_CONSTRAINT OFF -section_id LOGIC_RESERVE_1
+		set_global_assignment -name LL_PR_REGION OFF -section_id LOGIC_RESERVE_1
+		set_global_assignment -name LL_WIDTH 1 -section_id LOGIC_RESERVE_1
+		set_global_assignment -name LL_HEIGHT 7 -section_id LOGIC_RESERVE_1
+		set_global_assignment -name LL_ORIGIN X4_Y2 -section_id LOGIC_RESERVE_1
+
+	# end LOGICLOCK_REGION(LOGIC_RESERVE_1)
+	# -------------------------------------
+
+	# start LOGICLOCK_REGION(LOGIC_RESERVE_2)
+	# ---------------------------------------
+
+		# LogicLock Region Assignments
+		# ============================
+		set_global_assignment -name LL_ENABLED ON -section_id LOGIC_RESERVE_2
+		set_global_assignment -name LL_AUTO_SIZE OFF -section_id LOGIC_RESERVE_2
+		set_global_assignment -name LL_STATE LOCKED -section_id LOGIC_RESERVE_2
+		set_global_assignment -name LL_RESERVED ON -section_id LOGIC_RESERVE_2
+		set_global_assignment -name LL_SECURITY_ROUTING_INTERFACE OFF -section_id LOGIC_RESERVE_2
+		set_global_assignment -name LL_IGNORE_IO_BANK_SECURITY_CONSTRAINT OFF -section_id LOGIC_RESERVE_2
+		set_global_assignment -name LL_PR_REGION OFF -section_id LOGIC_RESERVE_2
+		set_global_assignment -name LL_WIDTH 1 -section_id LOGIC_RESERVE_2
+		set_global_assignment -name LL_HEIGHT 8 -section_id LOGIC_RESERVE_2
+		set_global_assignment -name LL_ORIGIN X11_Y1 -section_id LOGIC_RESERVE_2
+
+	# end LOGICLOCK_REGION(LOGIC_RESERVE_2)
+	# -------------------------------------
+
+	# start DESIGN_PARTITION(Top)
+	# ---------------------------
+
+		# Incremental Compilation Assignments
+		# ===================================
+		set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+		set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+		set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+		set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+
+	# end DESIGN_PARTITION(Top)
+	# -------------------------
+
+	# start DESIGN_PARTITION(p0_PLL_C9CB26FA)
+	# ---------------------------------------
+
+		# Incremental Compilation Assignments
+		# ===================================
+		set_global_assignment -name PARTITION_COLOR 52377 -section_id p0_PLL_C9CB26FA -tag alta_auto
+		set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id p0_PLL_C9CB26FA -tag alta_auto
+		set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id p0_PLL_C9CB26FA -tag alta_auto
+		set_instance_assignment -name PARTITION_HIERARCHY p0_PLL_C9CB26FA -to "PLL:p0|alta_pllx:PLL_C9CB26FA" -section_id p0_PLL_C9CB26FA
+
+	# end DESIGN_PARTITION(p0_PLL_C9CB26FA)
+	# -------------------------------------
+
+# end ENTITY(Blink_AG1280)
+# ------------------------
