@@ -23,3 +23,10 @@ af.exe -B -X "set blaster_id 0" -X "source -progress 1000 Blink_AG1280_hybrid.pr
 ```
 af.exe -B -X "set blaster_id 0" -X "hybrid_write -device AG1280Q48 Blink_AG1280_hybrid.hyb"
 ```
+
+## 擦除FLASH
+
+```
+af.exe -B -X "set blaster_id 0" -X "set bitgen_usb_speed 3000" -X "exit [catch {erase_flash}]"
+```
+
