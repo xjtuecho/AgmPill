@@ -27,6 +27,8 @@ range of applications, especially in consumer and mobile device products.
 - [AG1280Q48 MANUAL](./doc/AG1280/MANUAL_AG1280.pdf)
 - [A Blink Demo](./hdl/Blink_AG1280)
 - [Supra and Documents(Fetch Code: q59e)](http://pan.baidu.com/s/1eQxc6XG)
+- [FAQ Document](./doc/AgmPillFAQ.md)
+- [Purchase Link](https://item.taobao.com/item.htm?spm=a1z10.1-c.w4023-23472711792.7.7a435ad5EnKqe1&id=668471065760)
 
 ## AgmPill PINOUT
 
