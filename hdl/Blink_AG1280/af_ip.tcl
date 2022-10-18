@@ -1,6 +1,6 @@
 set AGM_SUPRA true
 set DESIGN "Blink_AG1280"
-set IPLIST {alta_bram alta_bram9k alta_sram alta_wram alta_pll alta_pllx alta_pllv alta_pllve alta_boot alta_osc alta_mult alta_multm alta_ufm alta_ufms alta_ufml alta_i2c alta_spi alta_irda alta_mcu alta_mcu_m3 alta_saradc }
+set IPLIST {alta_bram alta_bram9k alta_sram alta_wram alta_pll alta_pllx alta_pllv alta_pllve alta_boot alta_osc alta_mult alta_multm alta_ufm alta_ufms alta_ufml alta_i2c alta_spi alta_irda alta_mcu alta_mcu_m3 alta_saradc alta_adc alta_dac alta_cmp }
 lappend IPLIST alta_rv32
 
 proc set_alta_partition {inst tag} {
@@ -15,14 +15,22 @@ proc set_alta_partition {inst tag} {
 }
 
 load_package flow
+if { $DESIGN == "" } {
+  set DESIGN $::quartus(args)
+}
 project_open $DESIGN
 
 set tag alta_auto
 if { [llength $IPLIST] > 0 } {
+  # A Quartus bug saves PARTITION_HIERARCHY assignments without tag. Use section_id to remove them.
+  set asgn_col [get_all_global_assignments -name PARTITION_NETLIST_TYPE -tag $tag]
+  foreach_in_collection part $asgn_col {
+    set section_id [lindex $part 0]
+    eval "remove_all_instance_assignments -name PARTITION_HIERARCHY -section_id $section_id"
+  }
   eval "remove_all_global_assignments -name PARTITION_COLOR -tag $tag"
   eval "remove_all_global_assignments -name PARTITION_NETLIST_TYPE -tag $tag"
   eval "remove_all_global_assignments -name PARTITION_FITTER_PRESERVATION_LEVEL -tag $tag"
-  eval "remove_all_instance_assignments -name PARTITION_HIERARCHY -tag $tag"
   catch { execute_module -tool map }
 
   foreach ip $IPLIST {

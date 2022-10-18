@@ -25,7 +25,7 @@ if { ! [info exists TOP_MODULE] } {
   set TOP_MODULE "Blink_AG1280"
 }
 if { ! [info exists IP_FILES] } {
-  set IP_FILES {"E:/echo/project/echo/Company/AGM/Blink_AG1280/PLL.ip" }
+  set IP_FILES {"E:/echo/git/github/xjtuecho/AgmPill/hdl/Blink_AG1280/PLL.ip" }
 }
 if { ! [info exists VE_FILE] } {
   set VE_FILE ""
@@ -57,7 +57,7 @@ if { ! [info exists PREFIX] } {
 } else {
   set RESULT $PREFIX$DESIGN
 }
-if { $FLOW == "GEN" || $FLOW == "PACK" || $FLOW == "SKIP" } { set no_route "-no_route" }
+if { $FLOW == "GEN" || $FLOW == "PACK" || $FLOW == "LOAD" } { set no_route "-no_route" }
 set RUN "run"
 if { $FLOW == "CHECK" } {
   set RUN "check"
@@ -189,6 +189,8 @@ if { $LOAD_DB } {
   error "Unsupported mode $MODE"
 }
 
+if { $FLOW == "PACK" } { exit }
+
 if { [info exists FITTING] } {
   if { $FITTING == "Auto" } { set FITTING auto; }
   set_mode -fitting $FITTING
@@ -260,7 +262,6 @@ if { $FLOW == "PROBE" } {
 } else {
   set ret [place_pseudo -user_io -place_io -place_pll -place_gclk -warn_io]
   if { !$ret } { exit -1 }
-  if { $FLOW == "PACK" } { exit }
 
   set org_place ""
   set load_place ""
