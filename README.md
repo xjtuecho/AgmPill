@@ -21,7 +21,7 @@ range of applications, especially in consumer and mobile device products.
 
 ## AgmPill Resource
 
-- [AgmPill Schematic](./doc/AgmPill_v21.10.6.pdf)
+- [AgmPill Schematic](./sch/AgmPill_v21.10.6.pdf)
 - [AG1280Q48 Datasheet](./doc/AG1280/AG1280Q48_V1.0.PDF)
 - [AG1280Q48 PINOUT](./doc/AG1280/AG1280Q48_PINOUT.xls)
 - [AG1280Q48 MANUAL](./doc/AG1280/MANUAL_AG1280.pdf)
@@ -33,6 +33,8 @@ range of applications, especially in consumer and mobile device products.
 ## AgmPill PINOUT
 
 ![AgmPill PINOUT](./image/AgmPill_PINOUT.png)
+
+# MegaPill
 
 If AgmPill can't satisfy your application, in others words, you need more LEs or IOs, you can try MegaPill, which is based on AG10KL144.
 
@@ -50,7 +52,7 @@ If AgmPill can't satisfy your application, in others words, you need more LEs or
 
 ## MegaPill Resource
 
-- [MegaPill Schematic](./doc/MegaPill_v21.11.16.pdf)
+- [MegaPill Schematic](./sch/MegaPill_v21.11.16.pdf)
 - [AG10KL144 Datasheet](./doc/AG10K/AGM_FPGA_AG6K_AG10K_Rev1.1.PDF)
 - [AG10KL144 PINOUT](./doc/AG10K/AG10K_FBGA256_LQFP144_Pinout_Release.xls)
 - [AG10KL144 MANUAL](./doc/AG10K/AG10K_guide.pdf)
@@ -60,3 +62,28 @@ If AgmPill can't satisfy your application, in others words, you need more LEs or
 ## MegaPill PINOUT
 
 ![MegaPill](./image/MegaPill.jpg)
+
+# GreenPill
+
+If you are familiar with Altera Max II CPLD, you can try GreenPill, which is based on AG256SL100. AG256SL100 is pin2pin compatible with EPM240T100.
+Furthermore, GreenPill has a built-in USB-Blaster, you can download bitstream to the chip with a MicroUSB cable.
+
+## GreenPill Specification
+
+- dimension: 70x50mm.
+- 2x40 2.54mm PIN header.
+- Builtin USB-Blaster.
+- 256 LUTs.
+- 256 Kbits UFM.
+- EDA Tool:Quartus and Supra.
+
+
+## GreenPill Resource
+
+- [GreenPill Schematic](./sch/GreenPill_v21.12.26.pdf)
+- [AG256SL100 Datasheet](./doc/AGCPLD/AG_CPLD_Rev1_1.PDF)
+- [A Blink Demo](./hdl/Blink_AG256SL100)
+
+## GreenPill PINOUT
+
+![GreenPill](./image/GreenPill.jpg)
