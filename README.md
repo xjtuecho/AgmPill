@@ -10,7 +10,7 @@ range of applications, especially in consumer and mobile device products.
 ## AgmPill Specification
 
 - dimension: 41x23mm.
-- 2x16 2.54mm PIN header, 26 user IO.
+- 2x16 2.54mm PIN header, 20.32mm(800mil), 26 user IO.
 - 2x5 PIN standard USB-Blaster port.
 - 24MHz dedicated clock input on PIN_13.
 - 1280 LUTs.
@@ -21,7 +21,7 @@ range of applications, especially in consumer and mobile device products.
 
 ## AgmPill Resource
 
-- [AgmPill Schematic](./sch/AgmPill_v21.10.6.pdf)
+- [AgmPill Schematic](./sch/AgmPill_v21.10.6_SCH.pdf)
 - [AG1280Q48 Datasheet](./doc/AG1280/AG1280Q48_V1.0.PDF)
 - [AG1280Q48 PINOUT](./doc/AG1280/AG1280Q48_PINOUT.xls)
 - [AG1280Q48 MANUAL](./doc/AG1280/MANUAL_AG1280.pdf)
