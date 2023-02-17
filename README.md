@@ -65,6 +65,8 @@ If AgmPill can't satisfy your application, in others words, you need more LEs or
 
 ![MegaPill](./image/MegaPill.jpg)
 
+![MegaPill](./image/MegaPill_ASM.png)
+
 # GreenPill
 
 If you are familiar with Altera Max II CPLD, you can try GreenPill, which is based on AG256SL100. AG256SL100 is pin2pin compatible with EPM240T100.
@@ -89,3 +91,5 @@ Furthermore, GreenPill has a built-in USB-Blaster, you can download bitstream to
 ## GreenPill PINOUT
 
 ![GreenPill](./image/GreenPill.jpg)
+
+![GreenPill](./image/GreenPill_ASM.png)
