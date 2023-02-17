@@ -34,6 +34,8 @@ range of applications, especially in consumer and mobile device products.
 
 ![AgmPill PINOUT](./image/AgmPill_PINOUT.png)
 
+![AgmPill ASM](./image/AgmPill_ASM.png)
+
 # MegaPill
 
 If AgmPill can't satisfy your application, in others words, you need more LEs or IOs, you can try MegaPill, which is based on AG10KL144.
